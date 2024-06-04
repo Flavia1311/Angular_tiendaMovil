@@ -1,0 +1,53 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Precio</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (celular of celulares; track celular.name) {
+            <tr>
+                
+                     <td><img [src]="celular.imagen" [alt]="celular.modelo"></td>
+    <td>{{ celular.name }}</td>
+    <td>{{ celular.price }}</td>
+    <td>{{ celular.style }}</td>
+    @if (celular.stock >0) {
+      <td>{{ celular.stock }}</td>
+    } @else {
+      <td>SIN STOCK</td>
+    }
+  </tr>
+} @empty {
+  <tr>
+    <td colspan="4">No hay celulares para mostrar.</td>
+  </tr>
+}
+  
+        <tr>
+            <td>Motorola</td>
+            <td>G 200</td>
+            <td>520000</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Motorola</td>
+            <td>Edge 30 Neo</td>
+            <td>390000</td>
+            <td>26</td>
+        </tr>
+        <tr>
+            <td>Samsung</td>
+            <td>A14</td>
+            <td>320000</td>
+            <td>50</td>
+        </tr>
+        <tr>
+
+        </tr>    
+    </tbody>
+</table>
