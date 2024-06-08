@@ -28,7 +28,14 @@ export class CelularListComponent {
       modelo:"Edge 30 neo",
       precio:350000,
       stock:20,
-      imagen:"assets/img/motor30neo.jpeg"
+      imagen:"assets/img/motorEdge30Neo.jpeg"
+    },
+         {
+      marca:"Motorola",
+      modelo:"G200",
+      precio:520000,
+      stock:15,
+      imagen:"assets/img/motorG200.jpeg"
     },
   ];
 }

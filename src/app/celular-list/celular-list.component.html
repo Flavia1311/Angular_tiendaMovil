@@ -9,13 +9,13 @@
         </tr>
     </thead>
     <tbody>
-        @for (celular of celulares; track celular.name) {
+        @for (celular of celulares; track celular.modelo) {
             <tr>
                 
-                     <td><img [src]="celular.imagen" [alt]="celular.modelo"></td>
-    <td>{{ celular.name }}</td>
-    <td>{{ celular.price }}</td>
-    <td>{{ celular.style }}</td>
+    <td><img [src]="celular.imagen" [alt]="celular.modelo"></td>
+    <td>{{ celular.marca }}</td>
+    <td>{{ celular.modelo}}</td>
+    <td>{{ celular.precio }}</td>
     @if (celular.stock >0) {
       <td>{{ celular.stock }}</td>
     } @else {
@@ -26,28 +26,6 @@
   <tr>
     <td colspan="4">No hay celulares para mostrar.</td>
   </tr>
-}
-  
-        <tr>
-            <td>Motorola</td>
-            <td>G 200</td>
-            <td>520000</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>Motorola</td>
-            <td>Edge 30 Neo</td>
-            <td>390000</td>
-            <td>26</td>
-        </tr>
-        <tr>
-            <td>Samsung</td>
-            <td>A14</td>
-            <td>320000</td>
-            <td>50</td>
-        </tr>
-        <tr>
-
-        </tr>    
+},
     </tbody>
 </table>
