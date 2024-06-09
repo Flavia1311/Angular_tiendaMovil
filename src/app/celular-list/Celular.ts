@@ -4,5 +4,5 @@ export interface ICelular{
     precio:number;
     stock:number;
     imagen:string;
-
+    oferta:boolean;
 }

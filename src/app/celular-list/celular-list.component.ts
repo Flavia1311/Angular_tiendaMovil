@@ -14,28 +14,32 @@ export class CelularListComponent {
       modelo:"A04",
       precio:250000,
       stock:60,
-      imagen:"assets/img/samsA04.jpeg"
+      imagen:"assets/img/samsA04.jpeg",
+      oferta:true,
     },
      {
       marca:"Samsung",
       modelo:"A14",
       precio:250000,
       stock:30,
-      imagen:"assets/img/samsA14.jpeg"
+      imagen:"assets/img/samsA14.jpeg",
+      oferta:false,
     },
      {
       marca:"Motorola",
       modelo:"Edge 30 neo",
       precio:350000,
       stock:20,
-      imagen:"assets/img/motorEdge30Neo.jpeg"
+      imagen:"assets/img/motorEdge30Neo.jpeg",
+      oferta:false,
     },
          {
       marca:"Motorola",
       modelo:"G200",
       precio:520000,
       stock:15,
-      imagen:"assets/img/motorG200.jpeg"
+      imagen:"assets/img/motorG200.jpeg",
+      oferta:true,
     },
   ];
 }
