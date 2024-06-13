@@ -6,6 +6,8 @@ import { ICelular } from  './Celular';
   templateUrl: './celular-list.component.html',
   styleUrl: './celular-list.component.scss'
 })
+
+
 export class CelularListComponent {
   celulares:Array<ICelular>=[
 
@@ -16,6 +18,7 @@ export class CelularListComponent {
       stock:60,
       imagen:"assets/img/samsA04.jpeg",
       oferta:true,
+      cantidad:2,
     },
      {
       marca:"Samsung",
@@ -24,6 +27,7 @@ export class CelularListComponent {
       stock:30,
       imagen:"assets/img/samsA14.jpeg",
       oferta:false,
+      cantidad:0,
     },
      {
       marca:"Motorola",
@@ -32,6 +36,7 @@ export class CelularListComponent {
       stock:20,
       imagen:"assets/img/motorEdge30Neo.jpeg",
       oferta:false,
+      cantidad:0,
     },
          {
       marca:"Motorola",
@@ -40,6 +45,15 @@ export class CelularListComponent {
       stock:15,
       imagen:"assets/img/motorG200.jpeg",
       oferta:true,
+      cantidad:0,
     },
   ];
+
+  aumentarCantidad(celular:ICelular):void{
+celular.cantidad++;
+  }
+  disminuirCantidad(celular:ICelular):void{
+   celular.cantidad++; 
+  }
+
 }

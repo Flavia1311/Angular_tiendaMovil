@@ -6,15 +6,16 @@
             <th>Modelo</th>
             <th>Precio</th>
             <th>Stock</th>
-        </tr>
+            <th>Compra</th> 
+          </tr>
     </thead>
     <tbody>
         @for (celular of celulares; track celular.modelo) {
       
               <thead [ngClass]="{'oferta': celular.oferta}">
           <tr>
-                         
-    <td><img [src]="celular.imagen" [alt]="celular.modelo"></td>
+                        
+    <td><img width="90" class="img-thumbnail" [src]="celular.imagen" [alt]="celular.modelo"></td>
     <td>{{ celular.marca }}</td>
     <td>{{ celular.modelo}}</td>
     <td>{{ celular.precio | currency}}</td>
@@ -24,7 +25,7 @@
     } @else {
       <td class="badge text-bg-warning">SIN STOCK</td>
     }
-    
+    <td><button class="btn btn-default" (click)="disminuirCantidad(celular)">-</button> {{celular.cantidad}}<button (click)="aumentarCantidad(celular)">+</button> </td>
 
   </tr>
   </thead>
