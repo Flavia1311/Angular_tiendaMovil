@@ -53,7 +53,7 @@ export class CelularListComponent {
 celular.cantidad++;
   }
   disminuirCantidad(celular:ICelular):void{
-   celular.cantidad++; 
+   celular.cantidad--; 
   }
 
 }
