@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { CelularListComponent } from './celular-list/celular-list.component';
+
 import { TiendaMovilCelularesComponent } from './tienda-movil-celulares/tienda-movil-celulares.component';
 import { TiendaMovilAboutComponent } from './tienda-movil-about/tienda-movil-about.component';
 

@@ -10,20 +10,18 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let celular of celulares; trackBy: trackByModelo" [ngClass]="{'oferta': celular.oferta}">
+        <tr *ngFor="let celular of celulares" [ngClass]="{'oferta': celular.oferta}">
             <td><img width="90" class="img-thumbnail" [src]="celular.imagen" [alt]="celular.modelo"></td>
             <td>{{ celular.marca }}</td>
             <td>{{ celular.modelo }}</td>
             <td>{{ celular.precio | currency }}</td>
             <td>
                 <span *ngIf="celular.stock > 1">{{ celular.stock }}</span>
-                <span *ngIf="celular.stock <= 1" class="badge text-bg-warning">SIN STOCK</span>
+                <span *ngIf="celular.stock <1" class="badge text-bg-warning">SIN STOCK</span>
             </td>
-            <td>
-                <button type="button" class="btn btn-default" (click)="disminuirCantidad(celular)">-</button> 
-                <input class="smallInput" type="number" [(ngModel)]="celular.cantidad">
-                <button type="button" class="btn btn-default" (click)="aumentarCantidad(celular)">+</button> 
-            </td>
+            <td><app-input-integer [(cantidad)]="celular.cantidad" [max]="celular.stock"  *ngIf="celular.stock"></app-input-integer>
+            Cant:{{celular.cantidad}}
+        </td>
         </tr>
         <tr *ngIf="celulares.length === 0">
             <td colspan="6">No hay celulares para mostrar.</td>

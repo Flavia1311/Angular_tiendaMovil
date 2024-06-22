@@ -6,7 +6,7 @@ import { ICelular } from './Celular';
   templateUrl: './celular-list.component.html',
   styleUrls: ['./celular-list.component.scss']
 })
-export class CelularListComponent implements OnInit {
+export class CelularListComponent {
   celulares: Array<ICelular> = [
     {
       marca: "Samsung",
@@ -46,22 +46,7 @@ export class CelularListComponent implements OnInit {
     },
   ];
 
-  aumentarCantidad(celular: ICelular) {
-    if (celular.cantidad<celular.stock)
-    celular.cantidad++;
-  }
 
-  disminuirCantidad(celular: ICelular) {
-    if (celular.cantidad > 0) {
-      celular.cantidad--;
-    }
-  }
 
-  trackByModelo(index: number, celular: ICelular): string {
-    return celular.modelo;
-  }
 
-  constructor() {}
-
-  ngOnInit(): void {}
 }
