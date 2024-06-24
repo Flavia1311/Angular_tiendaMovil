@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ICelular } from './Celular';
+import { CelularCarritoService } from '../celular-carrito.service';
 
 @Component({
   selector: 'app-celular-list',
   templateUrl: './celular-list.component.html',
-  styleUrls: ['./celular-list.component.scss']
+  styleUrl: './celular-list.component.scss',
 })
-export class CelularListComponent {
+export class CelularListComponent implements OnInit {
   celulares: Array<ICelular> = [
     {
       marca: "Samsung",
@@ -44,9 +45,23 @@ export class CelularListComponent {
       oferta: true,
       cantidad: 0,
     },
-  ];
+  ]
+
+    ngOnInit(): void {
+
+  } 
+constructor(private carrito:CelularCarritoService){
+
+}
 
 
+agregarAlCarrito(celular: any):void{
+this.carrito.agregarAlCarrito(celular);
+}
+
+maxAlcanzado(m: string){
+  alert(m);
+}
 
 
 }

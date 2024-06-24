@@ -6,21 +6,21 @@ import { TiendaMovilCelularesComponent } from './tienda-movil-celulares/tienda-m
 import { TiendaMovilAboutComponent } from './tienda-movil-about/tienda-movil-about.component';
 
 const routes: Routes = [
-  {
-    path:'',
+  { path: '', 
     redirectTo: 'celulares',
-    pathMatch: 'full',
+    pathMatch: 'full' ,
   },
-  { 
+  {
     path: 'celulares',
-    component: TiendaMovilCelularesComponent,
+    component: TiendaMovilCelularesComponent
   },
-    { 
+  {
     path: 'about',
-    component:TiendaMovilAboutComponent,
+    component: TiendaMovilAboutComponent
   },
-  ];
   
+];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

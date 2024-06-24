@@ -24,7 +24,7 @@ import { InputIntegerComponent } from './input-integer/input-integer.component';
     FormsModule
   ],
   providers: [
-    provideClientHydration()
+    
   ],
   bootstrap: [AppComponent]
 })

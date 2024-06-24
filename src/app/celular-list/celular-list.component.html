@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table text-center">
     <thead>
         <tr>
             <th>Imagen</th>
@@ -16,15 +16,15 @@
             <td>{{ celular.modelo }}</td>
             <td>{{ celular.precio | currency }}</td>
             <td>
-                <span *ngIf="celular.stock > 1">{{ celular.stock }}</span>
+                <span *ngIf="celular.stock >= 1">{{ celular.stock }}</span>
                 <span *ngIf="celular.stock <1" class="badge text-bg-warning">SIN STOCK</span>
             </td>
-            <td><app-input-integer [(cantidad)]="celular.cantidad" [max]="celular.stock"  *ngIf="celular.stock"></app-input-integer>
-            Cant:{{celular.cantidad}}
-        </td>
-        </tr>
-        <tr *ngIf="celulares.length === 0">
-            <td colspan="6">No hay celulares para mostrar.</td>
+            <td>
+                <app-input-integer [(cantidad)]="celular.cantidad" [max]="celular.stock"  *ngIf="celular.stock" (maxAlcanzado)="maxAlcanzado($event)"></app-input-integer>
+            </td>
+            <td>
+             <button class="btn btn-primary" (click)="agregarAlCarrito(celular)" >Comprar</button>
+         </td>  
         </tr>
     </tbody>
 </table>

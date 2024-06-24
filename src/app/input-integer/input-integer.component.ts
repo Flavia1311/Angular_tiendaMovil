@@ -15,10 +15,17 @@ export class InputIntegerComponent {
   @Output()
   cantidadChange:EventEmitter<number>=new EventEmitter<number>();
 
+  @Output()
+  maxAlcanzado:EventEmitter<string>=new EventEmitter<string>();
+
   aumentarCantidad() {
-    if (this.cantidad<this.max)
+    if (this.cantidad<this.max){
      this.cantidad++;
-    this.cantidadChange.emit(this.cantidad);
+    this.cantidadChange.emit(this.cantidad);   
+    }
+    else{
+    this.maxAlcanzado.emit("se alcanzo el max");
+    }
   }
 
   disminuirCantidad() {
