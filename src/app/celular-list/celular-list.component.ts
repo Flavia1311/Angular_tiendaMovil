@@ -57,6 +57,8 @@ constructor(private carrito:CelularCarritoService){
 
 agregarAlCarrito(celular: any):void{
 this.carrito.agregarAlCarrito(celular);
+celular.stock-=celular.cantidad;
+celular.cantidad=0;
 }
 
 maxAlcanzado(m: string){
