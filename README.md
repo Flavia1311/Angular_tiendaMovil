@@ -18,7 +18,7 @@ Una aplicación para la gestión de tareas donde se pueden añadir, editar, elim
 Datos del Estudiante
 Nombre: Flavia Vázquez Fesler
 Sede: Loberia
-Enlace al Proyecto en StackBlitz
+Enlace al Proyecto en StackBlitz: https://stackblitz.com/~/github.com/Flavia1311/Angular_tiendaMovil
 
 
 
