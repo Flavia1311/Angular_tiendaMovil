@@ -16,7 +16,7 @@ export class CelularListComponent implements OnInit {
       stock: 60,
       imagen: "assets/img/samsA04.jpeg",
       oferta: true,
-      cantidad: 2,
+      cantidad: 0,
     },
     {
       marca: "Samsung",
